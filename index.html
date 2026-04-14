@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swosti Makaju — Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Swosti Makaju.</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="toggle-icon icon-sun">☀️</span>
+        <span class="toggle-icon icon-moon">🌙</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-tag">✦ Loading...</p>
+        <h1>Learning to build <em>beautiful</em> things.</h1>
+        <p class="hero-sub">Exploring digital worlds, designing interfaces, writing scripts, and
+          growing one project at a time.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">See My Work</a>
+          <a href="#contact" class="btn btn-outline">Say Hello</a>
+        </div>
+      </div>
+      <div class="hero-profile-card">
+        <div class="profile-avatar"><img src="p.jpg" alt="Swosti Makaju"></div>
+        <div class="profile-name">Swosti Makaju</div>
+        <div class="profile-role"></div>
+        <div class="profile-divider"></div>
+        <div class="profile-socials">
+          <a href="https://www.facebook.com/swostimakaju" class="social-btn" title="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/swostimakaju/" class="social-btn" title="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+          <a href="https://github.com/Swosti-Makaju" class="social-btn" title="GitHub">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
+        </div>
+        <div class="profile-badge">
+          <div class="badge-dot"></div>Open to opportunities
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="reveal">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">A little about who I am.</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>Hi! I'm <strong>Swosti Makaju</strong>,  I have basic knowledge of <strong>Figma</strong>, which I use to design simple and effective UI/UX layouts. I have successfully completed a vehicle rental system project, where I applied my development skills to build a functional and practical solution. 
+        <p>Currently, I am learning Flutter to expand my skills in mobile app development. I am always eager to learn new technologies and improve my problem-solving abilities.</p>
+          <p>When I'm not coding, you'll find me hiking, reading, or spending too long tweaking a color palette.</p>
+        <br />
+        <a href="#contact" class="btn btn-outline">Let's connect →</a>
+      </div>
+      <div class="about-card">
+        <div class="about-stat">
+          <div class="stat-item">
+            <div class="stat-icon">🎨</div>
+            <div class="stat-info"><strong>UI/UX Design (Figma)</strong><span>Layouts, components, prototypes</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">🐍</div>
+            <div class="stat-info"><strong>Python Programming</strong><span>Scripts, automation, mini-projects</span>
+            </div>
+          </div>
+            <div class="stat-item">
+            <div class="stat-icon">📱</div>
+            <div class="stat-info"><strong>Flutter</strong><span>Mobile app design and development</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">🤝</div>
+            <div class="stat-info"><strong>Collaborative by nature</strong><span>I believe the best products are built
+                together, not in isolation.</span></div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">✨</div>
+            <div class="stat-info"><strong>Detail-obsessed</strong><span>The difference between good and great is
+                usually in the small things.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="padding: 0 4rem; background: var(--bg);">
+    <div class="divider"></div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="reveal">
+      <p class="section-label">Projects</p>
+      <h2 class="section-title">Things I've made<br />while learning.</h2>
+    </div>
+    <div class="projects-grid reveal">
+      <div class="project-card">
+        <div class="project-thumb thumb-ux">
+          <video autoplay muted loop playsinline>
+            <source src="edit.mp4" type="video/mp4">
+          </video>
+          <!-- fallback emoji if video fails -->
+          🌐
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Web Development</span>
+          <h3>Vehicle Rental System</h3>
+          <p>A digital platform designed to facilitate the process of renting vehicles to customers.</p>
+        </div>
+        <div class="project-footer">
+          <div class="project-tools"><span class="tool-pill">PHP</span><span class="tool-pill">HTML</span><span class="tool-pill">CSS</span><span class="tool-pill">JS</span></div>
+          <a href="https://github.com/Swosti-Makaju" class="project-link" target="_blank">View</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb thumb-figma">🖼️</div>
+        <div class="project-body">
+          <p class="project-tag">UI Design</p>
+          <h3>Mobile App Concept</h3>
+          <p>A Figma prototype for a vehicle renting app. Focused on clean layouts, intuitive navigation, and a warm
+            color palette.</p>
+        </div>
+        <div class="project-footer">
+          <div class="project-tools"><span class="tool-pill">Figma</span></div><a
+            href="https://www.figma.com/proto/XvvbsstAnkWWjCJtTX7klh/vrs?node-id=121-94&starting-point-node-id=121%3A94&t=QbKIUPOs1S9yaOJE-1"
+            class="project-link">View</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb thumb-python">🐍</div>
+        <div class="project-body">
+          <p class="project-tag">Python Script</p>
+          <h3>Expense Tracker CLI</h3>
+          <p>A command-line app to track daily expenses. Built with Python, practicing file I/O and basic data
+            structures.</p>
+        </div>
+        <div class="project-footer">
+          <div class="project-tools"><span class="tool-pill">Python</span></div><a href="https://github.com/Swosti-Makaju/Expense_Tracker"
+            class="project-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="reveal">
+      <div class="section-eyebrow"><div class="section-line"></div><span class="section-label">Skills</span></div>
+      <h2 class="section-title">Tools I work with.</h2>
+    </div>
+    <div class="tools-row reveal">
+      <div class="tool-badge">🎨 Figma</div>
+      <div class="tool-badge">📱 Flutter</div>
+      <div class="tool-badge">🐍 Python</div>
+      <div class="tool-badge">🐘 PHP</div>
+      <div class="tool-badge">💻 VS Code</div>
+      <div class="tool-badge">🐙 GitHub</div>
+      <div class="tool-badge">🔡 HTML/CSS</div>
+      <div class="tool-badge">🗄 SQL</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="reveal">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Let's talk.</h2>
+    </div>
+    <div class="contact-layout reveal">
+      <div class="contact-text">
+        <p>Whether you want to collaborate, give feedback on my work, or just say hi — I'd love to hear from you. I'm
+          always open to learning from others.</p>
+        <div class="contact-links">
+          <a href="mailto:makajuswosti05@gmail.com" class="contact-link">
+            <div class="contact-link-icon">✉️</div>
+            <div class="contact-link-info"><strong>Email</strong><span>makajuswosti05@gmail.com</span></div>
+          </a>
+          <a href="https://www.linkedin.com/in/swosti-makaju-76aa0528a/" class="contact-link">
+            <div class="contact-link-icon">🔗</div>
+            <div class="contact-link-info"><strong>LinkedIn</strong><span>linkedin.com/in/Swosti-Makaju</span></div>
+          </a>
+          <a href="https://github.com/Swosti-Makaju" class="contact-link">
+            <div class="contact-link-icon">🐙</div>
+            <div class="contact-link-info"><strong>GitHub</strong><span>github.com/Swosti-Makaju</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Jane Doe" /></div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="jane@email.com" /></div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Hey! I'd love to connect..."></textarea>
+        </div>
+        <button class="btn-send">Send Message ✦</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 <span>Swosti Makaju</span>. Crafted with curiosity.</p>
+  </footer>
+
+  <script>
+    
+    // ─── Theme Toggle (persists across page loads) ───
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', saved);
+
+    themeBtn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    // ─── Hamburger ───
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => { toggle.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => { toggle.classList.remove('open'); mobileMenu.classList.remove('open'); }));
+    document.addEventListener('click', (e) => { if (!toggle.contains(e.target) && !mobileMenu.contains(e.target)) { toggle.classList.remove('open'); mobileMenu.classList.remove('open'); } });
+
+    // ─── Scroll reveal ───
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ─── Skill bars ───
+    const skillObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.querySelectorAll('.skill-fill').forEach(b => b.style.width = b.dataset.width); });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.skills-layout').forEach(el => skillObs.observe(el));
+
+    // ─── Active nav ───
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 200) current = s.id; });
+      navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + current ? 'var(--terracotta)' : ''; });
+    });
+  </script>
+</body>
+
+</html>
