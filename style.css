@@ -84,6 +84,7 @@
       font-size: 1.2rem;
       color: var(--terracotta);
       letter-spacing: 0.02em;
+      text-decoration: none;
     }
 
     .nav-links {
