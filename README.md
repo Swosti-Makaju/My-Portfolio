@@ -1,4 +1,4 @@
-🌷 Swosti Makaju — Personal Portfolio
+## 🌷 Swosti Makaju — Personal Portfolio
 
 A personal portfolio website built from scratch with vanilla HTML, CSS, and JavaScript. Showcases projects, skills, and contact information with a clean, modern design.
 
