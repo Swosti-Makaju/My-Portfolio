@@ -1,13 +1,12 @@
-# My-Portfolio
-www.swostimakaju.com.np
-
 🌷 Swosti Makaju — Personal Portfolio
 
 A personal portfolio website built from scratch with vanilla HTML, CSS, and JavaScript. Showcases projects, skills, and contact information with a clean, modern design.
 
+Link : www.swostimakaju.com.np
+
 ---
 
-## Features
+✨ Features
 
 - **Dark / Light mode** — theme preference is saved in `localStorage` and persists across page loads
 - **Responsive layout** — mobile-friendly with a hamburger menu for smaller screens
@@ -19,7 +18,7 @@ A personal portfolio website built from scratch with vanilla HTML, CSS, and Java
 
 ---
 
-## Project Structure
+🎏 Project Structure
 
 ```
 MY-PORTFOLIO/
@@ -33,7 +32,7 @@ MY-PORTFOLIO/
 
 ---
 
-## Sections
+🔶 Sections
 
 | Section | Description |
 |---------|-------------|
@@ -45,7 +44,7 @@ MY-PORTFOLIO/
 
 ---
 
-## Projects Showcased
+🌏 Projects Showcased
 
 - **Vehicle Rental System** — Full-stack web app (PHP, MySQL, HTML/CSS/JS) with member management, booking flow, and admin dashboard
 - **Mobile App Concept** — Figma prototype for a vehicle renting app with clean UI/UX
@@ -55,7 +54,7 @@ MY-PORTFOLIO/
 
 ---
 
-## Tech Stack
+👩🏻‍💻 Tech Stack
 
 - HTML5 / CSS3 / Vanilla JavaScript
 - Google Fonts — *Lora* & *DM Sans*
@@ -63,7 +62,7 @@ MY-PORTFOLIO/
 
 ---
 
-## Getting Started
+💫 Getting Started
 
 1. Clone or download the repository.
 2. Place your profile photo as `p.jpg` in the root folder.
@@ -72,7 +71,7 @@ MY-PORTFOLIO/
 
 ---
 
-## Customization
+🌻 Customization
 
 - **Colors & theme variables** are defined as CSS custom properties at the top of `style.css` under `[data-theme="light"]` and `[data-theme="dark"]`.
 - **Content** (name, bio, project links, social URLs) is all in `index.html`.
@@ -80,7 +79,7 @@ MY-PORTFOLIO/
 
 ---
 
-## Contact
+📡 Contact
 
 - **Email:** makajuswosti05@gmail.com
 - **GitHub:** [github.com/Swosti-Makaju](https://github.com/Swosti-Makaju)
