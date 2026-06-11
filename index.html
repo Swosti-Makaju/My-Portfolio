@@ -31,7 +31,7 @@
 
   <!-- NAV -->
   <nav id="nav">
-    <a href="#" class="nav-logo" id="logoLink">Swos☕</a>
+    <a href="#" class="nav-logo" id="logoLink">Swosti👻</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -91,9 +91,10 @@
         <div class="avatar-wrap">
           <div class="avatar-ring"></div>
           <div class="avatar-ring2"></div>
-          <div class="avatar-bg">
-            <img src="image/i.jpg" alt="Swosti Makaju" onerror="this.style.display='none'">
-            <div class="avatar-initials">SM</div>
+          <div class="avatar-bg" id="avatarBg">
+            <img src="image/i.jpg" alt="Swosti Makaju"
+              onerror="this.style.display='none'; document.getElementById('avatarInitials').style.display='flex';">
+            <div class="avatar-initials" id="avatarInitials" style="display:none">SM</div>
           </div>
 
           <!-- floating tag — top right -->
@@ -259,7 +260,7 @@
           </div>
         </div>
 
-          <div class="project-card">
+        <div class="project-card">
           <div class="project-thumb thumb-flutter"><span class="thumb-emoji">💪</span></div>
           <div class="project-body">
             <span class="project-type">Mobile Dev</span>
@@ -468,12 +469,6 @@
           <div class="contact-card-icon">📸</div>
           <div class="contact-card-info"><span class="contact-card-label">Instagram</span><strong>@swostimakaju</strong>
           </div>
-          <div class="contact-card-arrow">→</div>
-        </a>
-        <a href="https://www.facebook.com/swostimakaju" class="contact-card" target="_blank">
-          <div class="contact-card-icon">📘</div>
-          <div class="contact-card-info"><span
-              class="contact-card-label">Facebook</span><strong>facebook.com/swostimakaju</strong></div>
           <div class="contact-card-arrow">→</div>
         </a>
       </div>
