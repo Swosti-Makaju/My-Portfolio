@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Swosti Makaju — Portfolio</title>
-    <!-- SEO -->
+  <!-- SEO -->
   <meta name="description"
     content="Swosti Makaju — Final-year BCA student from Nepal. Flutter developer, UI/UX designer, and Python enthusiast. Building clean, functional apps one project at a time." />
   <meta name="keywords"
@@ -32,6 +32,9 @@
   <div class="blob blob-a"></div>
   <div class="blob blob-b"></div>
   <div class="blob blob-c"></div>
+
+  <!-- Mobile menu overlay backdrop -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
 
   <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
@@ -106,7 +109,7 @@
           <div class="avatar-ring"></div>
           <div class="avatar-ring2"></div>
           <div class="avatar-bg" id="avatarBg">
-            <img src="image/i.jpg" alt="Swosti Makaju"
+            <img src="image/i.jpg" alt="Swosti Makaju" loading="lazy"
               onerror="this.style.display='none'; document.getElementById('avatarInitials').style.display='flex';">
             <div class="avatar-initials" id="avatarInitials" style="display:none">SM</div>
           </div>
@@ -161,7 +164,7 @@
       </div>
       <div class="about-grid reveal">
         <div class="about-text">
-          <p>Hi! I'm <strong>Swosti Makaju</strong>, a final-year BCA student with an interest in <strong>software
+          <p>Hi! I'm <strong>Swosti Makaju</strong>, a final-year BCA student with an interest in <strong>mobile app development</strong> , <strong>software
               development</strong> and <strong>UI/UX design</strong>. I have basic knowledge of <strong>Figma</strong>,
             which I use to create clean and user-friendly interface designs.</p>
           <p>I successfully completed a Vehicle Rental System project, where I applied my development skills to build a
@@ -218,8 +221,8 @@
 
         <div class="project-card">
           <div class="project-thumb thumb-ux">
-            <video autoplay muted loop playsinline>
-              <source src="video/edit.mp4" type="video/mp4">
+            <video muted loop playsinline>
+              <source data-src="video/edit.mp4" type="video/mp4">
             </video>
             🌐
           </div>
@@ -238,8 +241,8 @@
 
         <div class="project-card">
           <div class="project-thumb thumb-flutter">
-            <video autoplay muted loop playsinline>
-              <source src="video/notes.mp4" type="video/mp4">
+            <video muted loop playsinline>
+              <source data-src="video/notes.mp4" type="video/mp4">
             </video>
             📱
           </div>
@@ -257,8 +260,8 @@
 
         <div class="project-card">
           <div class="project-thumb thumb-flutter">
-            <video autoplay muted loop playsinline>
-              <source src="video/weather.mp4" type="video/mp4">
+            <video muted loop playsinline>
+              <source data-src="video/weather.mp4" type="video/mp4">
             </video>
             🌤️
           </div>
@@ -401,6 +404,7 @@
               <span class="exp-chip">Data Structures</span>
               <span class="exp-chip">Algorithms</span>
               <span class="exp-chip">Software Eng.</span>
+              <span class="exp-chip">Mobile App Dev</span>
               <span class="exp-chip">Databases</span>
               <span class="exp-chip">Networking</span>
             </div>
@@ -531,10 +535,30 @@
     /* ─── MOBILE MENU ─── */
     const toggle = document.getElementById('navToggle');
     const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
     document.getElementById('menuClose').addEventListener('click', closeMobile);
-    toggle.addEventListener('click', () => { toggle.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
-    document.addEventListener('click', e => { if (!toggle.contains(e.target) && !mobileMenu.contains(e.target)) closeMobile(); });
-    function closeMobile() { toggle.classList.remove('open'); mobileMenu.classList.remove('open'); }
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = mobileMenu.classList.contains('open');
+      if (isOpen) closeMobile();
+      else openMobile();
+    });
+
+    // Close when clicking the backdrop overlay
+    mobileOverlay.addEventListener('click', closeMobile);
+
+    function openMobile() {
+      toggle.classList.add('open');
+      mobileMenu.classList.add('open');
+      mobileOverlay.classList.add('open');
+    }
+
+    function closeMobile() {
+      toggle.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      mobileOverlay.classList.remove('open');
+    }
 
     /* ─── REVEAL ─── */
     const obs = new IntersectionObserver((entries) => {
@@ -550,6 +574,27 @@
       sections.forEach(s => { if (window.scrollY >= s.offsetTop - 220) cur = s.id; });
       navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--terracotta)' : ''; });
     }, { passive: true });
+
+    /* ─── LAZY VIDEO ─── */
+    // Only observe <source> tags with data-src inside videos
+    const lazyVideos = document.querySelectorAll('video:has(source[data-src])');
+    const videoObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const video = entry.target;
+          video.querySelectorAll('source[data-src]').forEach(src => {
+            src.setAttribute('src', src.getAttribute('data-src'));
+            src.removeAttribute('data-src');
+          });
+          video.load();
+          video.play().catch(() => { });
+          videoObs.unobserve(video);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    lazyVideos.forEach(v => videoObs.observe(v));
+
   </script>
 </body>
 
