@@ -1470,3 +1470,153 @@ footer span {
   .htag-1  { left: -20px; }
   .htag-2  { right: -10px; }
 }
+/* ══ GAME (first screen) ══ */
+.game-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  pointer-events: none;
+}
+
+.game-modal.hidden {
+  display: none;
+}
+
+.game-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .65);
+  backdrop-filter: blur(10px);
+}
+
+.game-modal-panel {
+  position: relative;
+  width: min(640px, 100%);
+  max-height: calc(100vh - 3rem);
+  overflow: hidden;
+  padding: 1.6rem;
+  border-radius: 28px;
+  background: rgba(22, 18, 14, .96);
+  border: 1px solid rgba(255, 255, 255, .08);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, .35);
+  pointer-events: auto;
+}
+
+.game-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid var(--border2);
+  background: var(--surface2);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.game-hero .section-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.game-hero .section-eyebrow {
+  justify-content: center;
+}
+
+.game-hero .section-title {
+  margin-bottom: 2.2rem;
+}
+
+.game-card {
+  margin: 0 auto;
+  display: inline-block;
+  max-width: 540px;
+  width: 100%;
+  text-align: left;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 28px;
+  padding: 1.6rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .18);
+}
+
+.game-hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+  color: var(--text2);
+}
+
+.game-hud span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: .85rem 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .08);
+  font-size: .9rem;
+}
+
+.game-frame {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, .75);
+  border: 1px solid rgba(255, 255, 255, .08);
+}
+
+#flappyCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, rgba(26,20,16,.95) 0%, rgba(40,28,20,1) 100%);
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  padding: 1.6rem;
+  background: rgba(0, 0, 0, .66);
+  color: var(--text);
+}
+
+.game-overlay.hidden {
+  display: none;
+}
+
+.game-overlay-title {
+  font-size: 1rem;
+  color: var(--text2);
+  margin: 0;
+}
+
+.game-skip {
+  margin-top: 1.6rem;
+}
+
+.game-skip a {
+  font-size: .8rem;
+  color: var(--text2);
+  text-decoration: none;
+  letter-spacing: .04em;
+  transition: color .2s;
+}
+
+.game-skip a:hover {
+  color: var(--terracotta);
+}
