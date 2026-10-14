@@ -1,789 +1,337 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swosti Makaju — Portfolio</title>
-  <!-- SEO -->
-  <meta name="description"
-    content="Swosti Makaju — Final-year BCA student from Nepal. Flutter developer, UI/UX designer, and Python enthusiast. Building clean, functional apps one project at a time." />
-  <meta name="keywords"
-    content="Swosti Makaju, Flutter developer, Nepal, BCA, mobile app developer, UI UX designer, Python, portfolio" />
-  <meta name="author" content="Swosti Makaju" />
-
-  <!-- Open Graph (LinkedIn previews) -->
-  <meta property="og:title" content="Swosti Makaju — Flutter Developer & Designer" />
-  <meta property="og:description"
-    content="Final-year BCA student from Nepal building mobile apps with Flutter, designing interfaces in Figma, and exploring Python." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/Swosti-Makaju/My-Portfolio/main/image/i.jpg" />
-  <meta property="og:url" content="https://swosti-makaju.github.io/My-Portfolio/" />
-  <meta property="og:type" content="website" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Swosti Makaju — Flutter Developer &amp; Designer</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@300;400&display=swap"
-    rel="stylesheet" />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23B5704F'/><text x='50' y='68' font-size='52' font-family='serif' fill='white' text-anchor='middle'>SM</text></svg>">
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-  <div class="blob blob-a"></div>
-  <div class="blob blob-b"></div>
-  <div class="blob blob-c"></div>
-
-  <!-- Mobile menu overlay backdrop -->
-  <div class="mobile-overlay" id="mobileOverlay"></div>
-
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-close" id="menuClose">✕</button>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+  <div class="wrap">
+    <div class="top lab"><span>Flutter Developer · UI Designer</span>
+      <nav><a href="#work">Projects</a><a href="#build">How I build</a><a href="#contact">Contact</a></nav><span>Based
+        in Nepal</span>
+    </div>
   </div>
 
-  <!-- NAV -->
-  <nav id="nav">
-    <a href="#" class="nav-logo" id="logoLink">Swosti👻</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span class="toggle-icon icon-sun">☀️</span>
-        <span class="toggle-icon icon-moon">🌙</span>
-      </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+  <div class="wrap hero" id="stage">
+    <div class="big serif" data-d="-16">PORTFOLIO</div>
+    <div class="pw">
+      <div class="fig" id="fig"><img src="image/swosti.png" alt="Profile Image"></div>
     </div>
-  </nav>
-
-  <section id="gameModal" class="game-modal hidden" aria-hidden="true">
-    <div class="game-modal-backdrop"></div>
-    <div class="game-modal-panel reveal">
-      <button class="game-modal-close" id="gameClose" aria-label="Close game">✕</button>
-      <div class="game-hud">
-        <span class="game-score">Score: <strong id="gameScore">0</strong></span>
-        <span class="game-best">Best: <strong id="gameBest">0</strong></span>
-      </div>
-      <div class="game-frame">
-        <canvas id="flappyCanvas" width="480" height="360"></canvas>
-        <div class="game-overlay" id="gameOverlay">
-          <p class="game-overlay-title" id="gameOverlayTitle">Tap or press Space to fly</p>
-          <button class="btn btn-primary" id="gameStartBtn">Play</button>
-        </div>
-      </div>
+    <div class="hl">
+      <span class="im script">I'm</span>
+      <h1>SWOSTI</h1>
+      <div class="role serif">Flutter Developer<br>&amp; UI Designer</div>
+      <p>I build mobile apps that feel clear, calm and dependable, from the Figma file to the live backend.</p>
+      <a class="btn" href="#work">View my projects</a>
     </div>
-  </section>
-
-  <!-- HERO -->
-  <section class="hero" id="hero-section">
-    <div class="hero-inner">
-
-      <!-- left -->
-      <div class="hero-left">
-        <div class="hero-eyebrow">✦ Always curious…</div>
-        <h1>Learning to build<br><em>beautiful</em> things.</h1>
-        <p class="hero-sub">Exploring digital worlds, designing interfaces, writing scripts, and growing one project at
-          a time.</p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">See My Work</a>
-          <a href="#contact" class="btn btn-outline">Say Hello</a>
-          <button class="btn btn-secondary" id="showGameBtn">Play Game</button>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat-item">
-            <span class="hero-stat-num">3+</span>
-            <span class="hero-stat-label">Projects</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-num">2+</span>
-            <span class="hero-stat-label">Languages</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-num">🇳🇵</span>
-            <span class="hero-stat-label">Nepal</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-num">∞</span>
-            <span class="hero-stat-label">Curiosity</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="avatar-wrap">
-          <div class="avatar-ring"></div>
-          <div class="avatar-ring2"></div>
-          <div class="avatar-bg" id="avatarBg">
-            <img src="image/i.jpg" alt="Swosti Makaju" loading="lazy"
-              onerror="this.style.display='none'; document.getElementById('avatarInitials').style.display='flex';">
-            <div class="avatar-initials" id="avatarInitials" style="display:none">SM</div>
-          </div>
-
-          <!-- floating tag — top right -->
-          <div class="htag htag-2">Flutter · Python · PHP</div>
-
-          <!-- floating tag — bottom left -->
-          <div class="htag htag-1">
-            <span class="htag-dot"></span>
-            <span>Open to <span>opportunities</span></span>
-          </div>
-
-          <div class="avatar-socials">
-            <a href="https://github.com/Swosti-Makaju" target="_blank" class="av-social" title="GitHub">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/swosti-makaju-76aa0528a/" target="_blank" class="av-social"
-              title="LinkedIn">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/swostimakaju/" target="_blank" class="av-social" title="Instagram">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-              </svg>
-            </a>
-            <a href="https://www.facebook.com/swostimakaju" target="_blank" class="av-social" title="Facebook">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="hr" data-d="12">
+      <span class="script">Apps that feel effortless.</span>
+      <ul>
+        <li>Mobile Apps</li>
+        <li>UI / UX Design</li>
+        <li>Web &amp; Backend</li>
+      </ul>
     </div>
-  </section>
-
-  <!--  ABOUT  -->
-  <section id="about">
-    <div class="section-wrap">
-      <div class="reveal">
-        <div class="section-eyebrow">About Me</div>
-        <h2 class="section-title">A little about <em>who I am.</em></h2>
-      </div>
-      <div class="about-grid reveal">
-        <div class="about-text">
-          <p>Hi! I'm <strong>Swosti Makaju</strong>, a final-year BCA student with an interest in <strong>mobile app
-              development</strong> , <strong>software
-              development</strong> and <strong>UI/UX design</strong>. I have basic knowledge of <strong>Figma</strong>,
-            which I use to create clean and user-friendly interface designs.</p>
-          <p>I successfully completed a Vehicle Rental System project, where I applied my development skills to build a
-            practical and functional solution. I enjoy learning new technologies, improving my problem-solving
-            abilities, and exploring creative ways to make applications both useful and visually appealing.</p>
-          <p>When I'm not coding, you'll find me hiking, reading, or spending too long tweaking a color palette.</p>
-          <br>
-          <a href="#contact" class="btn btn-outline">Let's connect →</a>
-        </div>
-        <div class="about-card">
-          <div class="about-stat">
-            <div class="stat-item">
-              <div class="stat-icon">🎨</div>
-              <div class="stat-info"><strong>UI/UX Design (Figma)</strong><span>Layouts, components, prototypes</span>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">🐍</div>
-              <div class="stat-info"><strong>Python Programming</strong><span>Scripts, automation, mini-projects</span>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">📱</div>
-              <div class="stat-info"><strong>Flutter</strong><span>Mobile app design and development</span></div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">🤝</div>
-              <div class="stat-info"><strong>Collaborative by nature</strong><span>The best products are built together,
-                  not in isolation.</span></div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">✨</div>
-              <div class="stat-info"><strong>Detail-obsessed</strong><span>The difference between good and great is in
-                  the small things.</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div style="padding:0 4rem;background:var(--bg)">
-    <div class="divider"></div>
+    <div class="badge"><svg viewBox="0 0 120 120">
+        <defs>
+          <path id="c" d="M60 60 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0" />
+        </defs><text font-size="10" letter-spacing="3.2" fill="#EAF0FA" font-family="Jost">
+          <textPath href="#c">OPEN TO FLUTTER ROLES · AVAILABLE NOW ·</textPath>
+        </text>
+      </svg><b>&#10022;</b></div>
   </div>
 
-  <!--  PROJECTS  -->
-  <section id="projects">
-    <div class="section-wrap">
-      <div class="reveal">
-        <div class="section-eyebrow">Projects</div>
-        <h2 class="section-title">Things I've made<br><em>while learning.</em></h2>
+  <div class="wrap">
+    <div class="panel">
+      <div class="intro">
+        <h2>What<br>I do</h2>
+        <p>Mobile products built end to end, with design and code in one place.</p>
       </div>
-      <div class="projects-grid reveal">
-
-        <div class="project-card">
-          <div class="project-thumb thumb-ux">
-            <video muted loop playsinline>
-              <source data-src="video/edit.mp4" type="video/mp4">
-            </video>
-            🌐
-          </div>
-          <div class="project-body">
-            <span class="project-type">Web Development</span>
-            <h3>Vehicle Rental System</h3>
-            <p>A digital platform to facilitate vehicle renting. Includes member management, booking flow, and admin
-              dashboard built with a full PHP + SQL backend.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tools"><span class="tool-pill">PHP</span><span class="tool-pill">MySQL</span><span
-                class="tool-pill">HTML/CSS</span><span class="tool-pill">JS</span></div>
-            <a href="https://github.com/Swosti-Makaju/Vehicle-II" class="project-link" target="_blank">GitHub</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb thumb-flutter">
-            <video muted loop playsinline>
-              <source data-src="video/notes.mp4" type="video/mp4">
-            </video>
-            📱
-          </div>
-          <div class="project-body">
-            <span class="project-type">Mobile Dev</span>
-            <h3>Notes_App</h3>
-            <p>A lightweight, production-ready Flutter notes application with a clean Material 3 interface and reliable
-              offline data persistence.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tools"><span class="tool-pill">Flutter</span><span class="tool-pill">Dart</span></div>
-            <a href="https://github.com/Swosti-Makaju/Notes_App" class="project-link" target="_blank">GitHub</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb thumb-flutter">
-            <video muted loop playsinline>
-              <source data-src="video/weather.mp4" type="video/mp4">
-            </video>
-            🌤️
-          </div>
-          <div class="project-body">
-            <span class="project-type">Mobile Dev</span>
-            <h3>Weather_App</h3>
-            <p>A clean weather application built with Flutter and Dart, featuring live forecasts and a minimal, readable
-              interface.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tools"><span class="tool-pill">Flutter</span><span class="tool-pill">Dart</span></div>
-            <a href="https://github.com/Swosti-Makaju/Weather_App" class="project-link" target="_blank">GitHub</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb thumb-flutter"><span class="thumb-emoji">💪</span></div>
-          <div class="project-body">
-            <span class="project-type">Mobile Dev</span>
-            <h3>FitForge_App</h3>
-            <p>A Flutter fitness app to manage workouts, track habits, and stay consistent. Work-in-progress with some
-              features fully functional.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tools"><span class="tool-pill">Flutter</span><span class="tool-pill">Dart</span></div>
-            <a href="https://github.com/Swosti-Makaju/FitForge_App" class="project-link" target="_blank">GitHub</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb thumb-figma"><span class="thumb-emoji">🖼️</span></div>
-          <div class="project-body">
-            <span class="project-type">UI Design</span>
-            <h3>UI/UX Design</h3>
-            <p>A Figma prototype for a vehicle renting app. Clean layouts, intuitive navigation, and a warm color
-              palette.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tools"><span class="tool-pill">Figma</span></div>
-            <a href="https://www.figma.com/proto/XvvbsstAnkWWjCJtTX7klh/vrs?node-id=121-94&starting-point-node-id=121%3A94&t=QbKIUPOs1S9yaOJE-1"
-              class="project-link" target="_blank">View</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb thumb-python"><span class="thumb-emoji">🐍</span></div>
-          <div class="project-body">
-            <span class="project-type">Python Script</span>
-            <h3>Expense Tracker CLI</h3>
-            <p>A command-line app to log daily expenses. Practices file I/O, basic data structures, and clean terminal
-              UX.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tools"><span class="tool-pill">Python</span></div>
-            <a href="https://github.com/Swosti-Makaju/Expense_Tracker" class="project-link" target="_blank">GitHub</a>
-          </div>
-        </div>
-
+      <div class="col">
+        <div class="tile t1" role="img" aria-label="Icons of my mobile apps"></div>
+        <h3>Mobile apps</h3>
+        <p>Flutter, Dart and GetX apps with clean architecture and responsive layouts.</p><span class="n">01</span>
+      </div>
+      <div class="col">
+        <div class="tile t2" role="img" aria-label="Figma board with my app screens"></div>
+        <h3>UI / UX design</h3>
+        <p>Figma prototypes, consistent design systems, light and dark themes.</p><span class="n">02</span>
+      </div>
+      <div class="col">
+        <div class="tile t3" role="img" aria-label="Django admin login"></div>
+        <h3>Web &amp; backend</h3>
+        <p>PHP, Python, SQL and REST APIs, working alongside Django backends.</p><span class="n">03</span>
+      </div>
+      <div class="col">
+        <div class="tile t4"><span><i style="background:#FFCA28"></i>Firebase</span><span><i
+              style="background:#3B82F6"></i>Cloudinary</span><span><i
+              style="background:#60BB46"></i>eSewa</span><span><i style="background:#8B5CF6"></i>Khalti</span></div>
+        <h3>Integrations</h3>
+        <p>Firebase, Cloudinary, and eSewa and Khalti payment gateways.</p><span class="n">04</span>
       </div>
     </div>
-  </section>
 
-  <!--  EXPERIENCE  -->
-  <section id="experience">
-    <div class="section-wrap">
-      <div class="reveal">
-        <div class="section-eyebrow">My Journey</div>
-        <h2 class="section-title">Where I've <em>been.</em></h2>
+    <div class="wh" id="work">
+      <div>
+        <h2>Projects</h2>
+        <p>Apps and websites I've built.</p>
       </div>
-      <div class="exp-layout reveal">
-
-        <!-- LEFT: timeline -->
-        <div class="timeline">
-
-          <div class="timeline-item">
-            <div class="tl-meta">
-              <span class="tl-date">2022 — Present</span>
-              <span class="tl-badge">Current</span>
+    </div>
+    <div class="pg" id="pg">
+      <!-- Nibangsh Consultancy: image = image/projects/nibangsh.png | set the live (Vercel) link and the GitHub link in the two buttons below -->
+      <article class="pc">
+        <div class="stg" style="--a:#0F766E">
+          <div class="dev ph" style="--a:#0F766E;--b:#2DD4BF"><i class="nt"></i>
+            <div class="scr">
+              <div class="mh"></div>
+              <div class="mb"></div>
+              <div class="mr"><s></s><u></u></div>
+              <div class="mr"><s></s><u></u></div>
+              <div class="mr"><s></s><u></u></div>
             </div>
-            <h3 class="tl-title">BCA — Final Year Student</h3>
-            <div class="tl-place">Swastik College (TU), Nepal</div>
-            <p class="tl-desc">
-              Pursuing a Bachelor of Computer Applications (BCA) at Swastik College,
-              Tribhuvan University. Developing skills in Flutter, Python, and UI/UX
-              design through academic and personal projects, while building practical
-              experience in software development.
-            </p>
+          </div><img class="shot" src="image/projects/nibangsh.png" alt="Nibangsh Consultancy screenshot" loading="lazy"
+            onload="this.parentNode.classList.add('has')" onerror="this.remove()">
+        </div>
+        <div class="pb"><span class="lab">01 / Mobile app</span>
+          <h3>Nibangsh Consultancy</h3>
+          <p>Education platform for Nepalese students going abroad, with student and admin sides, about 36 screens, MCQ
+            and EPS-TOPIK quizzes with image and audio.</p>
+          <p class="how"><b>How I built it</b>Controller, repository, model, view structure on GetX, with server-side
+            access control for quiz content.</p>
+          <div class="tg"><span>Flutter · GetX · Django REST · PostgreSQL</span></div>
+          <div class="acts"><a class="act fill" href="https://nibangsh-consultancy.vercel.app" target="_blank"
+              rel="noopener">View page &#8599;</a><a class="act" href="https://github.com/Swosti-Makaju" target="_blank"
+              rel="noopener">GitHub repo &#8599;</a></div>
+        </div>
+      </article>
+      <!-- Ride Sathi: image = image/projects/ridesathi.png | set the live (Vercel) link and the GitHub link in the two buttons below -->
+      <article class="pc">
+        <div class="stg" style="--a:#0D9488">
+          <div class="dev ph" style="--a:#0D9488;--b:#5EEAD4"><i class="nt"></i>
+            <div class="scr">
+              <div class="mh"></div>
+              <div class="mb"></div>
+              <div class="mr"><s></s><u></u></div>
+              <div class="mr"><s></s><u></u></div>
+              <div class="mr"><s></s><u></u></div>
+            </div>
+          </div><img class="shot" src="image/projects/ridesathi.png" alt="Ride Sathi screenshot" loading="lazy"
+            onload="this.parentNode.classList.add('has')" onerror="this.remove()">
+        </div>
+        <div class="pb"><span class="lab">02 / Mobile app</span>
+          <h3>Ride Sathi</h3>
+          <p>Vehicle rental app with image uploads and a full light and dark theme. Live tracking is planned next.</p>
+          <p class="how"><b>How I built it</b>Firestore data model, Cloudinary uploads, and a payment flow for eSewa and
+            Khalti.</p>
+          <div class="tg"><em>eSewa</em><em>Khalti</em><span>Firebase · Cloudinary</span></div>
+          <div class="acts"><a class="act fill" href="https://your-project.vercel.app" target="_blank"
+              rel="noopener">View page &#8599;</a><a class="act" href="https://github.com/Swosti-Makaju" target="_blank"
+              rel="noopener">GitHub repo &#8599;</a></div>
+        </div>
+      </article>
+      <!-- Vehicle Rental System: image = image/projects/vehicle-rental.png | set the live (Vercel) link and the GitHub link in the two buttons below -->
+      <article class="pc">
+        <div class="stg" style="--a:#115E59">
+          <div class="dev br" style="--a:#115E59;--b:#34D399">
+            <div class="bt"><s></s><s></s><s></s></div>
+            <div class="scr">
+              <div class="mh"></div>
+              <div class="gr"><b></b><b></b><b></b><b></b></div>
+            </div>
+          </div><img class="shot" src="image/projects/vehicle-rental.png" alt="Vehicle Rental System screenshot"
+            loading="lazy" onload="this.parentNode.classList.add('has')" onerror="this.remove()">
+        </div>
+        <div class="pb"><span class="lab">03 / Web app</span>
+          <h3>Vehicle Rental System</h3>
+          <p>Bookings, member management and an admin dashboard.</p>
+          <p class="how"><b>How I built it</b>Server-rendered PHP with a MySQL schema for vehicles, bookings and users.
+          </p>
+          <div class="tg"><span>PHP · MySQL · JavaScript</span></div>
+          <div class="acts"><a class="act fill" href="https://your-project.vercel.app" target="_blank"
+              rel="noopener">View page &#8599;</a><a class="act" href="https://github.com/Swosti-Makaju/Vehicle-II"
+              target="_blank" rel="noopener">GitHub repo &#8599;</a></div>
+        </div>
+      </article>
+      <!-- FitForge: image = image/projects/fitforge.png | set the live (Vercel) link and the GitHub link in the two buttons below -->
+      <article class="pc">
+        <div class="stg" style="--a:#14B8A6">
+          <div class="dev ph" style="--a:#14B8A6;--b:#99F6E4"><i class="nt"></i>
+            <div class="scr">
+              <div class="mh"></div>
+              <div class="mb"></div>
+              <div class="mr"><s></s><u></u></div>
+              <div class="mr"><s></s><u></u></div>
+              <div class="mr"><s></s><u></u></div>
+            </div>
+          </div><img class="shot" src="image/projects/fitforge.png" alt="FitForge screenshot" loading="lazy"
+            onload="this.parentNode.classList.add('has')" onerror="this.remove()">
+        </div>
+        <div class="pb"><span class="lab">04 / Mobile app</span>
+          <h3>FitForge</h3>
+          <p>Fitness and habit tracking app.</p>
+          <p class="how"><b>How I built it</b>Flutter and Dart with a clean, simple screen flow.</p>
+          <div class="tg"><span>Flutter · Dart</span></div>
+          <div class="acts"><a class="act fill" href="https://your-project.vercel.app" target="_blank"
+              rel="noopener">View page &#8599;</a><a class="act" href="https://github.com/Swosti-Makaju/FitForge_App"
+              target="_blank" rel="noopener">GitHub repo &#8599;</a></div>
+        </div>
+      </article>
+      <!-- Weather: image = image/projects/weather.png | set the live (Vercel) link and the GitHub link in the two buttons below -->
+      <article class="pc">
+        <div class="stg" style="--a:#047857">
+          <div class="dev ph" style="--a:#047857;--b:#6EE7B7"><i class="nt"></i>
+            <div class="scr">
+              <div class="mh"></div>
+              <div class="mb"></div>
+              <div class="mr"><s></s><u></u></div>
+              <div class="mr"><s></s><u></u></div>
+              <div class="mr"><s></s><u></u></div>
+            </div>
+          </div><img class="shot" src="image/projects/weather.png" alt="Weather screenshot" loading="lazy"
+            onload="this.parentNode.classList.add('has')" onerror="this.remove()">
+        </div>
+        <div class="pb"><span class="lab">05 / Mobile app</span>
+          <h3>Weather</h3>
+          <p>Live forecasts in a minimal interface.</p>
+          <p class="how"><b>How I built it</b>Calls a weather API and keeps the UI to what matters.</p>
+          <div class="tg"><span>Flutter · Dart</span></div>
+          <div class="acts"><a class="act fill" href="https://your-project.vercel.app" target="_blank"
+              rel="noopener">View page &#8599;</a><a class="act" href="https://github.com/Swosti-Makaju/Weather_App"
+              target="_blank" rel="noopener">GitHub repo &#8599;</a></div>
+        </div>
+      </article>
+      <!-- Vehicle Rental System mobile design: image = image/projects/figma.png | set the live (Vercel) link and the GitHub link in the two buttons below -->
+      <article class="pc">
+        <div class="stg" style="--a:#115E59">
+          <div class="dev br" style="--a:#115E59;--b:#34D399">
+            <div class="bt"><s></s><s></s><s></s></div>
+            <div class="scr">
+              <div class="mh"></div>
+              <div class="gr"><b></b><b></b><b></b><b></b></div>
+            </div>
+          </div><img class="shot" src="image/projects/tile-design.jpg" alt="Vehicle Rental System screenshot"
+            loading="lazy" onload="this.parentNode.classList.add('has')" onerror="this.remove()">
+        </div>
+        <div class="pb"><span class="lab">06 / Design</span>
+          <h3>Vehicle Rental System, Mobile UI</h3>
+          <p>Figma prototype of the mobile version of the Vehicle Rental System website.</p>
+          <p class="how"><b>How I designed it</b>Mobile screens designed in Figma for the PHP and MySQL website, from
+            the home page to booking and profile.</p>
+          <div class="tg"><span>Figma</span></div>
+          <div class="acts"><a class="act fill"
+              href="https://www.figma.com/proto/XvvbsstAnkWWjCJtTX7klh/vrs?node-id=121-94&amp;starting-point-node-id=121%3A94&amp;t=QbKIUPOs1S9yaOJE-1"
+              target="_blank" rel="noopener">View prototype &#8599;</a></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="hw" id="build">
+      <div>
+        <h2>How I<br>build apps</h2>
+        <p class="sub">The same path on every project, from the first sketch to a payment going through.</p>
+        <div class="stp">
+          <div class="st"><i>1</i>
+            <div><b>Design in Figma</b><span>Screens and a small design system before any code.</span></div>
           </div>
-
-          <div class="timeline-item">
-            <div class="tl-meta">
-              <span class="tl-date">Jul 15, 2026 — Oct 16, 2026</span>
-            </div>
-            <h3 class="tl-title">Mobile App Development Internship</h3>
-            <div class="tl-place">Aeditech Software Company, Nepal</div>
-            <p class="tl-desc">
-              Working as a Mobile App Development Intern at Aeditech Software Company,
-              gaining practical experience in mobile application development and
-              contributing to real-world projects. The internship provides an
-              opportunity to apply my skills in Flutter, Python, and UI/UX design while
-              collaborating with a team of professionals.
-            </p>
+          <div class="st"><i>2</i>
+            <div><b>Build in Flutter + GetX</b><span>One controller per screen, repositories for data.</span></div>
           </div>
-
-          <div class="timeline-item">
-            <div class="tl-meta">
-              <span class="tl-date">2025</span>
-            </div>
-            <h3 class="tl-title">Flutter Learning Projects</h3>
-            <p class="tl-desc">Developed simple mobile applications using Flutter and Dart.
-              Implemented responsive UI components and navigation features.
-              Explored state management and API integration fundamentals.</p>
+          <div class="st"><i>3</i>
+            <div><b>Connect the API</b><span>Django REST or Firebase, with real error handling.</span></div>
           </div>
-
-          <div class="timeline-item">
-            <div class="tl-meta">
-              <span class="tl-date">2025</span>
-            </div>
-            <h3 class="tl-title">Vehicle Rental System (Project)</h3>
-            <p class="tl-desc">Designed and developed a vehicle rental system using PHP, MySQL, HTML, CSS, and
-              JavaScript.
-              Implemented user authentication, vehicle booking, and management features.
-              Worked with database design and CRUD operations.</p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="tl-meta">
-              <span class="tl-date">2025</span>
-            </div>
-            <h3 class="tl-title">UI/UX Designer (Personal Projects)</h3>
-            <p class="tl-desc">Created mobile and web interface designs using Figma.
-              Developed wireframes, prototypes, and responsive layouts.
-              Focused on usability, accessibility, and user-centered design.</p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="tl-meta">
-              <span class="tl-date">2020 — 2022</span>
-            </div>
-            <h3 class="tl-title">+2 Science</h3>
-            <div class="tl-place">Bagishwori Secondary School</div>
-            <p class="tl-desc">Completed my +2 Science education with a strong foundation in physics, mathematics, and
-              computer science.</p>
+          <div class="st"><i>4</i>
+            <div><b>Ship</b><span>Payments with eSewa and Khalti, then test and polish.</span></div>
           </div>
         </div>
+      </div>
+      <div>
+        <div class="code">
+          <div class="bar"><span>Controller pattern</span><span>Dart · GetX</span></div>
+          <pre><span class="k">class</span> <span class="t">UniversityController</span> <span class="k">extends</span> <span class="t">GetxController</span> {
+  <span class="k">final</span> universities = &lt;<span class="t">University</span>&gt;[].obs;
+  <span class="k">final</span> loading = <span class="k">false</span>.obs;
 
-        <!-- RIGHT: highlights panel -->
-        <div class="exp-highlights">
-
-          <div class="exp-hi-label">Skills &amp; Highlights</div>
-
-          <div class="exp-hi-card">
-            <div class="exp-hi-card-top">
-              <span class="exp-hi-icon">🎓</span>
-              <span class="exp-hi-title">BCA Degree</span>
-            </div>
-            <div class="exp-hi-chips">
-              <span class="exp-chip">Data Structures</span>
-              <span class="exp-chip">Algorithms</span>
-              <span class="exp-chip">Software Eng.</span>
-              <span class="exp-chip">Mobile App Dev</span>
-              <span class="exp-chip">Databases</span>
-              <span class="exp-chip">Networking</span>
-            </div>
-            <div class="exp-hi-note">Final year · project-focused</div>
-          </div>
-
-          <div class="exp-hi-card">
-            <div class="exp-hi-card-top">
-              <span class="exp-hi-icon">📚</span>
-              <span class="exp-hi-title">+2 Science</span>
-            </div>
-            <div class="exp-hi-chips">
-              <span class="exp-chip">Physics</span>
-              <span class="exp-chip">Mathematics</span>
-              <span class="exp-chip">Computer Science</span>
-            </div>
-            <div class="exp-hi-note">Foundation in analytical thinking</div>
-          </div>
-
+  <span class="k">Future</span>&lt;<span class="k">void</span>&gt; load() <span class="k">async</span> {
+    loading.value = <span class="k">true</span>;
+    universities.value = <span class="k">await</span> repo.fetchAll();
+    loading.value = <span class="k">false</span>;
+  }
+}</pre>
         </div>
-
+        <div class="bg">
+          <div><b>BCA, Swastik College (TU)</b><span>2022 — Present</span></div>
+          <div><b>+2 Science, Bagishwori School</b><span>2020 — 2022</span></div>
+          <div><b>Mobile App Dev Intern, Aeditech</b><span>Internship completed, 2026</span></div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!--  SKILLS  -->
-  <section id="skills">
-    <div class="section-wrap">
-      <div class="reveal">
-        <div class="section-eyebrow">Skills</div>
-        <h2 class="section-title">Tools I <em>work with.</em></h2>
+    <div class="cta" id="contact">
+      <div style="position:relative"><span class="lab" style="color:var(--teal)">Available for work</span>
+        <h2 class="serif">Open to<span class="script">Flutter roles.</span></h2>
+        <p>Junior Flutter and mobile roles, internships and freelance projects. Send me a message and I'll reply
+          quickly.</p>
+        <a class="btn fill" href="mailto:makajuswosti05@gmail.com">makajuswosti05@gmail.com</a>
       </div>
-      <div class="tools-row reveal">
-        <div class="tool-badge">🎨 Figma</div>
-        <div class="tool-badge">📱 Flutter</div>
-        <div class="tool-badge">🐍 Python</div>
-        <div class="tool-badge">🐘 PHP</div>
-        <div class="tool-badge">💻 VS Code</div>
-        <div class="tool-badge">🐙 GitHub</div>
-        <div class="tool-badge">🔡 HTML/CSS</div>
-        <div class="tool-badge">🍵 JavaScript</div>
-        <div class="tool-badge">🗄 SQL</div>
-        <div class="tool-badge">🎯 Dart</div>
+      <div class="who">
+        <div class="av"><img src="image/i.jpg" alt="Swosti Makaju"></div>
+        <div class="ct"><a href="https://github.com/Swosti-Makaju">GitHub</a><a
+            href="https://www.linkedin.com/in/swosti-makaju-76aa0528a/">LinkedIn</a><a
+            href="https://www.instagram.com/swostimakaju/">Instagram</a></div>
       </div>
     </div>
-  </section>
-
-  <!--  CONTACT  -->
-  <section id="contact">
-    <div class="contact-inner">
-      <div class="reveal">
-        <div class="section-eyebrow">Contact</div>
-        <h2 class="section-title">Let's <em>talk.</em></h2>
-        <p class="contact-desc">Whether you want to collaborate, give feedback on my work, or just say hi — I'd love to
-          hear from you. I'm always open to learning from others.</p>
-        <p class="contact-desc">Have an idea or project in mind? Let's turn it into something meaningful. I'm currently
-          open to internships and collaborations — if you think we can build something great together, don't hesitate to
-          reach out.</p>
-      </div>
-      <div class="contact-cards reveal">
-        <a href="mailto:makajuswosti05@gmail.com" class="contact-card">
-          <div class="contact-card-icon">✉️</div>
-          <div class="contact-card-info"><span
-              class="contact-card-label">Email</span><strong>makajuswosti05@gmail.com</strong></div>
-          <div class="contact-card-arrow">→</div>
-        </a>
-        <a href="https://github.com/Swosti-Makaju" class="contact-card" target="_blank">
-          <div class="contact-card-icon">🐙</div>
-          <div class="contact-card-info"><span
-              class="contact-card-label">GitHub</span><strong>github.com/Swosti-Makaju</strong></div>
-          <div class="contact-card-arrow">→</div>
-        </a>
-        <a href="https://www.linkedin.com/in/swosti-makaju-76aa0528a/" class="contact-card" target="_blank">
-          <div class="contact-card-icon">🔗</div>
-          <div class="contact-card-info"><span
-              class="contact-card-label">LinkedIn</span><strong>linkedin.com/in/Swosti-Makaju</strong></div>
-          <div class="contact-card-arrow">→</div>
-        </a>
-        <a href="https://www.instagram.com/swostimakaju/" class="contact-card" target="_blank">
-          <div class="contact-card-icon">📸</div>
-          <div class="contact-card-info"><span class="contact-card-label">Instagram</span><strong>@swostimakaju</strong>
-          </div>
-          <div class="contact-card-arrow">→</div>
-        </a>
-      </div>
+    <div class="foot"><span>© 2026 Swosti Makaju</span><span>Designing &amp; building apps</span>
+      <div><a href="https://github.com/Swosti-Makaju">GitHub</a><a
+          href="https://www.linkedin.com/in/swosti-makaju-76aa0528a/">LinkedIn</a></div>
     </div>
-  </section>
+  </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 <span>Swosti Makaju</span>. Crafted with curiosity.</p>
-    <div class="footer-right">
-      <a href="#" id="backToTop" class="footer-link">Back to top ↑</a>
-      <a href="mailto:makajuswosti05@gmail.com" class="footer-link">Email me</a>
-      <a href="https://github.com/Swosti-Makaju" class="footer-link" target="_blank">GitHub</a>
-    </div>
-  </footer>
+  <button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" width="22" height="22"
+      aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg></button>
 
   <script>
-
-    /* ─── NAV SCROLL ─── */
-    const navEl = document.getElementById('nav');
-    window.addEventListener('scroll', () => navEl.classList.toggle('scrolled', window.scrollY > 60), { passive: true });
-
-    /* ─── SMOOTH SCROLL + CLEAN URL ─── */
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        const id = a.getAttribute('href');
-        const t = id === '#' ? null : document.querySelector(id);
-        if (t) t.scrollIntoView({ behavior: 'smooth' });
-        else window.scrollTo({ top: 0, behavior: 'smooth' });
-        history.pushState(null, null, window.location.pathname);
-        closeMobile();
-      });
-    });
-
-    /* ─── THEME ─── */
-    const html = document.documentElement;
-    const saved = localStorage.getItem('theme') || 'dark';
-    html.setAttribute('data-theme', saved);
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
-
-    /* ─── MOBILE MENU ─── */
-    const toggle = document.getElementById('navToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileOverlay = document.getElementById('mobileOverlay');
-
-    document.getElementById('menuClose').addEventListener('click', closeMobile);
-    toggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = mobileMenu.classList.contains('open');
-      if (isOpen) closeMobile();
-      else openMobile();
-    });
-
-    // Close when clicking the backdrop overlay
-    mobileOverlay.addEventListener('click', closeMobile);
-
-    function openMobile() {
-      toggle.classList.add('open');
-      mobileMenu.classList.add('open');
-      mobileOverlay.classList.add('open');
-    }
-
-    function closeMobile() {
-      toggle.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      mobileOverlay.classList.remove('open');
-    }
-
-    /* ─── REVEAL ─── */
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80); });
-    }, { threshold: .1 });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-    /* ─── ACTIVE NAV ─── */
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    window.addEventListener('scroll', () => {
-      let cur = '';
-      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 220) cur = s.id; });
-      navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--terracotta)' : ''; });
-    }, { passive: true });
-
-    /* ─── LAZY VIDEO ─── */
-    // Only observe <source> tags with data-src inside videos
-    const lazyVideos = document.querySelectorAll('video:has(source[data-src])');
-    const videoObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const video = entry.target;
-          video.querySelectorAll('source[data-src]').forEach(src => {
-            src.setAttribute('src', src.getAttribute('data-src'));
-            src.removeAttribute('data-src');
-          });
-          video.load();
-          video.play().catch(() => { });
-          videoObs.unobserve(video);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    lazyVideos.forEach(v => videoObs.observe(v));
-
-    /* ─── FLAPPY BIRD ─── */
     (function () {
-      const canvas = document.getElementById('flappyCanvas');
-      const ctx = canvas.getContext('2d');
-      const overlay = document.getElementById('gameOverlay');
-      const overlayTitle = document.getElementById('gameOverlayTitle');
-      const startBtn = document.getElementById('gameStartBtn');
-      const scoreEl = document.getElementById('gameScore');
-      const bestEl = document.getElementById('gameBest');
-      const showGameBtn = document.getElementById('showGameBtn');
-      const gameModal = document.getElementById('gameModal');
-      const gameClose = document.getElementById('gameClose');
-
-      const W = canvas.width, H = canvas.height;
-      const GRAVITY = 0.45;
-      const FLAP = -7.5;
-      const PIPE_GAP = 130;
-      const PIPE_WIDTH = 56;
-      const PIPE_SPEED = 2.6;
-      const SPAWN_INTERVAL = 95;
-
-      let bird, pipes, frame, score, best, running, loopId;
-      best = Number(localStorage.getItem('flappyBest') || 0);
-      bestEl.textContent = best;
-
-      function reset() {
-        bird = { x: 90, y: H / 2, vy: 0, r: 12 };
-        pipes = [];
-        frame = 0;
-        score = 0;
-        running = false;
-        scoreEl.textContent = 0;
-      }
-
-      function spawnPipe() {
-        const margin = 40;
-        const top = margin + Math.random() * (H - PIPE_GAP - margin * 2);
-        pipes.push({ x: W, top, passed: false });
-      }
-
-      function flap() {
-        if (!running) return;
-        bird.vy = FLAP;
-      }
-
-      function update() {
-        frame++;
-        bird.vy += GRAVITY;
-        bird.y += bird.vy;
-
-        if (frame % SPAWN_INTERVAL === 0) spawnPipe();
-
-        pipes.forEach(p => { p.x -= PIPE_SPEED; });
-        pipes = pipes.filter(p => p.x > -PIPE_WIDTH);
-
-        pipes.forEach(p => {
-          if (!p.passed && p.x + PIPE_WIDTH < bird.x) {
-            p.passed = true;
-            score++;
-            scoreEl.textContent = score;
-          }
-        });
-
-        // collisions
-        if (bird.y + bird.r > H || bird.y - bird.r < 0) return gameOver();
-        for (const p of pipes) {
-          const inX = bird.x + bird.r > p.x && bird.x - bird.r < p.x + PIPE_WIDTH;
-          const hitTop = bird.y - bird.r < p.top;
-          const hitBottom = bird.y + bird.r > p.top + PIPE_GAP;
-          if (inX && (hitTop || hitBottom)) return gameOver();
-        }
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, W, H);
-
-        const accent = getComputedStyle(document.documentElement).getPropertyValue('--terracotta').trim();
-        const accent2 = getComputedStyle(document.documentElement).getPropertyValue('--accent2').trim();
-
-        // pipes
-        ctx.fillStyle = accent;
-        pipes.forEach(p => {
-          ctx.fillRect(p.x, 0, PIPE_WIDTH, p.top);
-          ctx.fillRect(p.x, p.top + PIPE_GAP, PIPE_WIDTH, H - (p.top + PIPE_GAP));
-        });
-
-        // bird
-        ctx.beginPath();
-        ctx.fillStyle = accent2;
-        ctx.arc(bird.x, bird.y, bird.r, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
+      var st = document.getElementById('stage'), fg = document.getElementById('fig');
+      var els = [].slice.call(st.querySelectorAll('[data-d]'));
+      var tx = 0, ty = 0, cx = 0, cy = 0, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.addEventListener('mousemove', function (e) { var r = st.getBoundingClientRect(); tx = ((e.clientX - r.left) / r.width - .5) * 2; ty = ((e.clientY - r.top) / r.height - .5) * 2 });
+      document.addEventListener('mouseleave', function () { tx = ty = 0 });
+      window.addEventListener('touchmove', function (e) { var t = e.touches[0], r = st.getBoundingClientRect(); tx = ((t.clientX - r.left) / r.width - .5) * 2; ty = ((t.clientY - r.top) / r.height - .5) * 2 }, { passive: true });
+      window.addEventListener('touchend', function () { tx = ty = 0 });
       function loop() {
-        update();
-        draw();
-        if (running) loopId = requestAnimationFrame(loop);
-      }
-
-      function gameOver() {
-        running = false;
-        cancelAnimationFrame(loopId);
-        if (score > best) {
-          best = score;
-          localStorage.setItem('flappyBest', best);
-          bestEl.textContent = best;
+        cx += (tx - cx) * .08; cy += (ty - cy) * .08;
+        if (!reduce) {
+          fg.style.transform = 'rotateY(' + cx * 14 + 'deg) rotateX(' + (-cy * 12) + 'deg)';
+          els.forEach(function (el) { var d = +el.dataset.d; el.style.transform = 'translate(' + cx * d + 'px,' + cy * d * .6 + 'px)' })
         }
-        overlayTitle.textContent = `Game over — score ${score}`;
-        startBtn.textContent = 'Play Again';
-        overlay.classList.remove('hidden');
+        requestAnimationFrame(loop)
       }
-
-      function startGame() {
-        reset();
-        running = true;
-        overlay.classList.add('hidden');
-        loop();
-      }
-
-      startBtn.addEventListener('click', startGame);
-      canvas.addEventListener('click', flap);
-      document.addEventListener('keydown', e => {
-        if (e.code === 'Space') { e.preventDefault(); flap(); }
-      });
-
-      const openModal = () => {
-        gameModal.classList.remove('hidden');
-        gameModal.setAttribute('aria-hidden', 'false');
-      };
-
-      const closeModal = () => {
-        gameModal.classList.add('hidden');
-        gameModal.setAttribute('aria-hidden', 'true');
-        running = false;
-        cancelAnimationFrame(loopId);
-      };
-
-      if (showGameBtn) {
-        showGameBtn.addEventListener('click', openModal);
-      }
-      if (gameClose) {
-        gameClose.addEventListener('click', closeModal);
-      }
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-      });
-
-      draw(); // initial empty frame
-      reset();
+      loop();
     })();
 
+    // clean URL: smooth scroll to sections without adding #work etc. to the address bar
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var id = a.getAttribute('href'), t = id.length > 1 ? document.querySelector(id) : null;
+        if (t) t.scrollIntoView({ behavior: 'smooth' }); else window.scrollTo({ top: 0, behavior: 'smooth' });
+        history.pushState(null, null, window.location.pathname + window.location.search);
+      });
+    });
+    // back to top
+    var toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', function () { toTop.classList.toggle('show', window.scrollY > 500) }, { passive: true });
+    toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); history.pushState(null, null, window.location.pathname + window.location.search) });
   </script>
 </body>
 
